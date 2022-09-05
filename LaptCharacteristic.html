@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/libs/choices.min.css" />
+    <link rel="stylesheet" href="/css/laptopcharact.css" />
+    <link
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>ლეპტოპის მახასიათებლები</title>
+  </head>
+  <body>
+    <a class="back-btn" href="Info.html">
+      <svg
+        width="53"
+        height="53"
+        viewBox="0 0 53 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="26.5" cy="26.5" r="26.5" fill="#D9D9D9" />
+        <path
+          d="M28.8577 19.3522C29.0832 19.5778 29.2099 19.8837 29.2099 20.2026C29.2099 20.5216 29.0832 20.8275 28.8577 21.053L22.9035 27.0073L28.8577 32.9615C29.0768 33.1883 29.198 33.4922 29.1953 33.8076C29.1926 34.123 29.0661 34.4247 28.843 34.6477C28.62 34.8707 28.3183 34.9972 28.0029 35C27.6875 35.0027 27.3837 34.8815 27.1568 34.6623L20.3522 27.8577C20.1267 27.6321 20 27.3262 20 27.0073C20 26.6883 20.1267 26.3824 20.3522 26.1568L27.1568 19.3522C27.3824 19.1267 27.6883 19 28.0073 19C28.3262 19 28.6321 19.1267 28.8577 19.3522Z"
+          fill="#2E2E2E"
+        />
+      </svg>
+    </a>
+    <div class="container">
+      <div class="site-tabs">
+        <a href="Info.html" class="employee-info site-tabs___item"
+          >თანამშრომლის ინფო
+        </a>
+        <a class="laptop-info site-tabs___item">ლეპტოპის მახასიათებლები</a>
+      </div>
+
+      <div class="content">
+        <div class="laptop-selection">
+          <div class="file-wrapper">
+            <form  action="https://pcfy.redberryinternship.ge/api/laptop/create" onsubmit="return validate()">
+              <input
+                class="file-input visually-hidden"
+                type="file"
+                id="file"
+                name="file"
+              />
+              <span class="file-span" id="error_file"
+                >ჩააგდე ან ატვირთე ლეპტოპის ფოტო</span
+              >
+              <label class="file-btn" for="file">ატვირთე</label>
+
+              <!-- mobile -->
+              <span class="file-bg-mob">
+                <svg
+                  width="54"
+                  height="54"
+                  viewBox="0 0 54 54"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M27 34.1998C30.9765 34.1998 34.2 30.9763 34.2 26.9998C34.2 23.0234 30.9765 19.7998 27 19.7998C23.0236 19.7998 19.8 23.0234 19.8 26.9998C19.8 30.9763 23.0236 34.1998 27 34.1998Z"
+                    fill="#79C6EE"
+                  />
+                  <path
+                    d="M20.25 4.5L16.1325 9H9C6.525 9 4.5 11.025 4.5 13.5V40.5C4.5 42.975 6.525 45 9 45H45C47.475 45 49.5 42.975 49.5 40.5V13.5C49.5 11.025 47.475 9 45 9H37.8675L33.75 4.5H20.25ZM27 38.25C20.79 38.25 15.75 33.21 15.75 27C15.75 20.79 20.79 15.75 27 15.75C33.21 15.75 38.25 20.79 38.25 27C38.25 33.21 33.21 38.25 27 38.25Z"
+                    fill="#79C6EE"
+                  />
+                </svg>
+              </span>
+              <label class="file-btn--mob" for="file"
+                >ლეპტოპის ფოტოს ატვირთვა</label
+              >
+            
+            <!-- <div class="uploaded-area">
+              <li class="row">
+                <div class="row-content">
+                  <span class="icon-check">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0C4.925 0 0 4.925 0 11C0 17.075 4.925 22 11 22C17.075 22 22 17.075 22 11C22 4.925 17.075 0 11 0ZM15.768 9.14C15.8558 9.03964 15.9226 8.92274 15.9646 8.79617C16.0065 8.6696 16.0227 8.53591 16.0123 8.40298C16.0018 8.27005 15.9648 8.14056 15.9036 8.02213C15.8423 7.90369 15.758 7.79871 15.6555 7.71334C15.5531 7.62798 15.4346 7.56396 15.3071 7.52506C15.1796 7.48616 15.0455 7.47316 14.9129 7.48683C14.7802 7.50049 14.6517 7.54055 14.5347 7.60463C14.4178 7.66872 14.3149 7.75554 14.232 7.86L9.932 13.019L7.707 10.793C7.5184 10.6108 7.2658 10.51 7.0036 10.5123C6.7414 10.5146 6.49059 10.6198 6.30518 10.8052C6.11977 10.9906 6.0146 11.2414 6.01233 11.5036C6.01005 11.7658 6.11084 12.0184 6.293 12.207L9.293 15.207C9.39126 15.3052 9.50889 15.3818 9.63842 15.4321C9.76794 15.4823 9.9065 15.505 10.0453 15.4986C10.184 15.4923 10.32 15.4572 10.4444 15.3954C10.5688 15.3337 10.6791 15.2467 10.768 15.14L15.768 9.14Z" fill="#BED918"/>
+                    </svg>
+                  </span>
+                  <div class="details">
+                    <span class="name">img143354.png,</span>
+                    <span class="size">2 MB</span>
+                  </div>
+                </div>
+                <button class="file-btn retry__btn">თავიდან ატვირთე </button>
+              </li>
+            </div> -->
+          </div>
+
+          <div class="lapt-name-row">
+            <div class="lapt_name input-wrapper">
+              <label class="lapt-name-label input-label" id="error_name"
+                >ლეპტოპის სახელი</label
+              >
+              <input
+                class="input"
+                type="text"
+                placeholder="HP"
+                id="laptop_name"
+                name="lapt_name"
+              />
+              <label class="input-condition" for="lapt_name" id="error"
+                >ლათინური ასოები, ციფრები, !@#$%^&*()_+=</label
+              >
+            </div>
+            <select class="multi-default" id="select">
+              <option value="" disabled selected hidden>ლეპტოპის ბრენდი</option>
+              <option value="1">HP</option>
+              <option value="2">Dell</option>
+              <option value="3">Microsoft</option>
+              <option value="4">Apple</option>
+              <option value="5">Lenovo</option>
+              <option value="6">Acer</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="feature-row">
+          <div class="cpu-row">
+            <select id="select1" class="multi-default cpu-select">
+              <option value="" disabled selected hidden>CPU</option>
+              <option value="1">Intel Core i3</option>
+              <option value="2">Intel Core i5</option>
+              <option value="3">Intel Core i7</option>
+              <option value="4">Intel Core i9</option>
+              <option value="5">AMD Ryzen 3</option>
+              <option value="6">AMD Ryzen 7</option>
+              <option value="7">AMD Ryzen 9</option>
+              <option value="8">AMD Athlon</option>
+              <option value="9">Apple M1</option>
+              <option value="10">AMD M2</option>
+            </select>
+
+            <div class="cpu-core input-wrapper">
+              <label class="lapt-name-label input-label" id="error_flow"
+                >CPU-ს ბირთვი</label
+              >
+              <input
+                class="input"
+                type="text"
+                placeholder="14"
+                id="cpu_core"
+                name="cpu_core"
+              />
+              <label class="input-condition" for="lapt_name" id="error"
+                >მხოლოდ ციფრები</label
+              >
+            </div>
+
+            <div class="cpu-flow input-wrapper">
+              <label class="lapt-name-label input-label" id="error_name"
+                >CPU-ს ბირთვი</label
+              >
+              <input
+                class="input"
+                type="text"
+                placeholder="365"
+                id="cpu_flow"
+                name="cpu_flow"
+              />
+              <label class="input-condition" for="cpu_flow" id="error3"
+                >მხოლოდ ციფრები</label
+              >
+            </div>
+          </div>
+
+          <div class="memory-row">
+            <div class="input-wrapper memory-input">
+              <label class="lapt-name-label input-label" id="error_ram"
+                >ლეპტოპის RAM (GB)</label
+              >
+              <input
+                class="input"
+                type="text"
+                placeholder="16"
+                id="laptop_ram"
+                name="lapt_ram"
+              />
+              <label class="input-condition" for="lapt_ram" id="error4"
+                >მხოლოდ ციფრები</label
+              >
+            </div>
+
+            <div class="memory-type">
+              <span class="input-label memory-type-title" id="error_memory">
+                მეხსიერების ტიპი
+                <span id="warning"><i class="fa fa-warning"></i></span>
+              </span>
+              <div class="memory-type-radiobtns">
+                <label class="custom-radio">
+                  <input type="radio" id="SSD" name="memory_type" value="1" />
+                  <span> SSD </span>
+                </label>
+                <label class="custom-radio">
+                  <input type="radio" id="HDD" name="memory_type" value="2" />
+                  <span> HDD </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="laptop-more-info-row">
+          <div class="laptop-info-row">
+            <div class="input-wrapper buy-date-input">
+              <label class="lapt-name-label input-label"
+                >შეძენის რიცხვი(არჩევითი)</label
+              >
+              <input
+                class="input"
+                type="text"
+                onfocus="(this.type='date')"
+                placeholder="დდ / თთ / წწწწ"
+                id="date"
+                name="date"
+              />
+            </div>
+
+            <div class="input-wrapper">
+              <label class="lapt-price-label input-label" id="error_price"
+                >ლეპტოპის ფასი</label
+              >
+              <input
+                class="lapt-price-input input"
+                type="text"
+                placeholder="0000"
+                id="laptop_price"
+                name="lapt_price"
+              />
+              <label class="input-condition" for="lapt_ram" id="error4"
+                >მხოლოდ ციფრები</label
+              >
+            </div>
+          </div>
+
+          <div class="laptop-info-condition">
+            <span class="input-label laptop-info-title" id="error_status">
+              ლეპტოპის მდგომარეობა
+              <span id="warning2"><i class="fa fa-warning"></i></span>
+            </span>
+
+            <div class="laptop-info-radiobtns">
+              <label class="custom-radio">
+                <input type="radio" id="new" name="lapt_status" value="1" />
+                <span> ახალი </span>
+              </label>
+              <label class="custom-radio">
+                <input type="radio" id="used" name="lapt_status" value="2" />
+                <span> მეორადი </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
+
+        <div class="button-row">
+          <div class="prev-btn">
+            <a href="Info.html" class="btn1">უკან</a>
+          </div>
+
+          <div class="remember-btn">
+            <a href="list.html" class="btn2">დამახსოვრება</a>
+          </div>
+        </div>
+      </div>
+      <div class="logo"><img src="images/LOGO-10 2.png" /></div>
+    </div>
+
+    <script src="/libs/choices.min.js"></script>
+    <script src="/js/laptopscript.js"></script>
+    <script src="/js/lap_select.js"></script>
+    <script src="/js/refresh.js"></script>
+  </body>
+</html>

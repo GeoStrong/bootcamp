@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/libs/choices.min.css" />
+    <link rel="stylesheet" href="/css/info.css" />
+    <title>თანამშრომლის ინფორმაცია</title>
+  </head>
+  <body>
+    <a class="back-btn" href="index.html">
+      <svg
+        width="53"
+        height="53"
+        viewBox="0 0 53 53"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="26.5" cy="26.5" r="26.5" fill="#D9D9D9" />
+        <path
+          d="M28.8577 19.3522C29.0832 19.5778 29.2099 19.8837 29.2099 20.2026C29.2099 20.5216 29.0832 20.8275 28.8577 21.053L22.9035 27.0073L28.8577 32.9615C29.0768 33.1883 29.198 33.4922 29.1953 33.8076C29.1926 34.123 29.0661 34.4247 28.843 34.6477C28.62 34.8707 28.3183 34.9972 28.0029 35C27.6875 35.0027 27.3837 34.8815 27.1568 34.6623L20.3522 27.8577C20.1267 27.6321 20 27.3262 20 27.0073C20 26.6883 20.1267 26.3824 20.3522 26.1568L27.1568 19.3522C27.3824 19.1267 27.6883 19 28.0073 19C28.3262 19 28.6321 19.1267 28.8577 19.3522Z"
+          fill="#2E2E2E"
+        />
+      </svg>
+    </a>
+    <div class="container">
+      <div class="site-tabs">
+        <a class="employee-info site-tabs___item">თანამშრომლის ინფო </a>
+        <a
+          class="laptop-info site-tabs___item"
+          href="LaptCharacteristic.html"
+          class="lapt_info"
+        >
+          ლეპტოპის მახასიათებლები
+        </a>
+      </div>
+      <div class="content">
+        <form
+          action="https://pcfy.redberryinternship.ge/api/laptop/create"
+          onsubmit="return validate()"
+          method="post"
+        >
+          <div class="form-input">
+            <div class="form-input__wrapper form-input__wrapper--name">
+              <label class="form-input__label" id="error_name">სახელი</label>
+              <input
+                class="form-input-name form-input__input"
+                type="text"
+                placeholder="გრიშა"
+                id="Name"
+                name="name"
+              />
+              <div>
+                <label
+                  class="form-input-name__condition form-input__condition"
+                  for="name"
+                  id="error"
+                  >მინიმუმ 2 სიმბოლო, ქართული ასოები</label
+                >
+              </div>
+            </div>
+
+            <div class="form-input__wrapper form-input__wrapper--surname">
+              <label class="form-input__label" id="error_surname">გვარი</label>
+              <input
+                class="form-input-surname form-input__input"
+                type="text"
+                placeholder="ბაგრატიონი"
+                id="lastname"
+                name="surname"
+              />
+              <div>
+                <label
+                  class="form-input-surname__condition form-input__condition"
+                  for="surname"
+                  id="error2"
+                  >მინიმუმ 2 სიმბოლო, ქართული ასოები</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="selects">
+            <select id="select" class="multi-default">
+              <option value="" disabled selected hidden>თიმი</option>
+              <option value="1">დეველოპმენტი</option>
+              <option value="2">HR</option>
+              <option value="3">გაყიდვები</option>
+              <option value="4">დიზაინი</option>
+              <option value="5">მარკეტინგი</option>
+            </select>
+
+            <select id="select1" class="multi-default">
+              <option value="" disabled selected hidden>პოზიცია</option>
+              <option value="1">ინტერნი</option>
+              <option value="2">ჯუნიორ დეველოპერი</option>
+              <option value="3">მიდლ დეველოპერი</option>
+              <option value="4">სენიორ დეველოპერი</option>
+              <option value="5">ლიდ დეველოპერი</option>
+              <option value="6">HR სპეციალისტი</option>
+              <option value="7">HR პროექტ მენეჯერი</option>
+              <option value="8">HR ბიზნეს პარტნიორი</option>
+              <option value="9">"ჯუნიორ ბიზნეს დეველოპერი</option>
+              <option value="10">ბიზნეს დეველოპერი</option>
+              <option value="11">სენიორ ბიზნეს დეველოპერი</option>
+              <option value="12">ჯუნიორ UI/UX დიზაინერი</option>
+              <option value="13">UI/UX დიზაინერი</option>
+              <option value="14">სენიორ UI/UX დიზაინერი</option>
+              <option value="15">ლიდ UI/UX დიზაინერი</option>
+              <option value="16">ბლოგერი</option>
+              <option value="17">growth მარკეტინგის სპეციალისტი</option>
+              <option value="18">მარკეტინგის თიმ ლიდი</option>
+            </select>
+          </div>
+
+          <div class="form-input__wrapper form-input__wrapper--email">
+            <label class="form-input__label" class="details" id="error_email"
+              >მეილი</label
+            >
+            <input
+              class="form-input-email form-input__input"
+              type="text"
+              placeholder="grish666@redberry.ge"
+              id="email"
+              name="email"
+            />
+            <div>
+              <label
+                class="form-input-surname__condition form-input__condition"
+                for="email"
+                id="error3"
+                >უნდა მთავრდებოდეს @redberry.ge-ით</label
+              >
+            </div>
+          </div>
+
+          <div class="form-input__wrapper form-input__wrapper--tel">
+            <label class="form-input__label" class="details" id="error_tel"
+              >ტელეფონის ნომერი</label
+            >
+            <input
+              class="form-input-tel form-input__input"
+              type="text"
+              placeholder="+995 598 00 07 01"
+              id="phone"
+              name="phone"
+            />
+            <div>
+              <label
+                class="form-input-surname__condition form-input__condition"
+                for="phone"
+                id="error4"
+                >უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს</label
+              >
+            </div>
+          </div>
+          <button id="btn" class="button" type="submit" onclick="return val()">
+            შემდეგი
+          </button>
+        </form>
+      </div>
+      <div class="logo"><img src="images/LOGO-10 2.png" /></div>
+    </div>
+
+    <script src="/libs/choices.min.js"></script>
+    <script src="/js/select.js"></script>
+    <script src="/js/refresh.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

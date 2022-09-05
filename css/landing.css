@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/HelveticaNeue-Light-08.ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/HelveticaNeue-01.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/HelveticaNeue-Medium-11.ttf');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/HelveticaNeue-Bold-02.ttf');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* global */
+
+.container {
+    max-width: 786px;
+    margin: 0 auto;
+    padding: 80px 0 145px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.logo {
+    width: fit-content;
+    margin-bottom: 85px;
+}
+
+.landing-bg {
+    margin-bottom: 123px;
+}
+
+.landing__link {
+    display: inline-block;
+    width: 387px;
+    height: 60px;
+    background-color: #62A1EB;
+    border-radius: 8px;
+    text-align: center;
+    padding: 18px 0;
+    color: #fff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.landing__link:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.landing-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 390px) {
+  .container {
+    max-width: 390px;
+    height: 100vh;
+    padding: 0 15px;
+    padding-top: 67px;
+    padding-bottom: 35px;
+  }
+
+  .landing__link {
+    width: 357px;
+  }
+  
+}

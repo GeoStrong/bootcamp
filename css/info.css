@@ -1,0 +1,369 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/HelveticaNeue-Light-08.ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/HelveticaNeue-01.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/HelveticaNeue-Medium-11.ttf');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/HelveticaNeue-Bold-02.ttf');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Helvetica';
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background: #F7F7F7;
+}
+
+.back-btn {
+    position: absolute;
+    top: 53px;
+    left: 70px;
+}
+
+.container {
+
+    max-width: 1296px;
+    padding: 91px 15px 44px 15px;
+    margin: 0 auto;
+}
+
+.site-tabs { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.site-tabs___item:not(:last-child) {
+    margin-right: 66px;
+}
+
+.site-tabs___item {
+    padding-bottom: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #232323;
+}
+
+.employee-info { 
+    position: relative;
+}
+
+.employee-info::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 185px;
+    background-color: #000;
+}
+
+.content {
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 96px 175px 44px 175px;
+    margin-bottom: 67px;
+}
+
+.form-input {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-input__wrapper {
+    flex-basis: calc(50% - 30px);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input__label {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.form-input__input { 
+    padding: 19px 16px;
+    border: 2px solid #8AC0E2;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.form-input-surname__condition,
+.form-input-name__condition {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #2E2E2E;
+}
+
+.choices,
+.choices:last-child  {
+    margin-bottom: 50px;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+    padding: 15px 12px;
+}
+
+.choices__inner {
+    background-color: #EBEBEB;
+}
+
+
+.choices__inner,
+.choices[data-type*=select-one].is-open .choices__inner {
+    border-radius: 8px;
+    border: none;
+}
+
+.choices[data-type*=select-one].is-open::after {
+    transform: rotate(180deg);
+    border: none;
+    margin: 0;
+}
+
+.choices[data-type*=select-one]::after {
+    content: "";
+    height: 10px;
+    width: 15px;
+    background-image: url(../images/arrow.svg);
+    border: none;
+    position: absolute;
+    right: 11.5px;
+    top: 50%;
+    margin-top: -2.5px;
+    pointer-events: none;
+}
+
+.choices__list--dropdown.is-active .choices__list .choices__item:first-child {
+    display: none;
+}
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] {
+    background-color: #fff;
+    border:none;
+}
+
+.choices__list--dropdown.is-active  {
+    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+    background-color: #E7F0F8;
+}
+
+
+.choices__item--selectable::after {
+    display: none;
+}
+
+
+.choices__placeholder {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    opacity: 1;
+}
+
+
+.form-input-email,
+.form-input-tel {
+    max-width: 100%;
+}
+
+.form-input__wrapper--email {
+    margin-bottom: 35px;
+}
+
+.form-input__wrapper--tel {
+    margin-bottom: 87px;
+}
+
+.button {
+    display: flex;
+    margin-left: auto;
+    padding:18px 45px;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    background-color: #62A1EB;
+    border-radius: 8px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 390px) {
+    .container {
+      max-width: 390px;
+      padding: 0 15px;
+      padding-top: 30px;
+    }
+
+    .content {
+        padding: 0;
+        padding: 38px 16px;
+        margin: 0 -15px;
+    }
+
+    .laptop-info{
+        display: none;
+    }
+
+    .site-tabs___item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .back-btn {
+        position: absolute;
+        top: 19px;
+        left: 0;
+    }
+
+    .back-btn svg circle {
+        display: none;
+    }
+
+    .site-tabs___item {
+        padding-bottom: 23px;
+    }
+
+    .site-tabs {
+        margin-bottom: 11px;
+    }
+
+    .employee-info::after {
+        content: '1/2';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 17px;
+        width: 21px;
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #898989;
+    }
+
+    .form-input__wrapper {
+        flex-basis: 100%;
+    }
+
+    .form-input__wrapper:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    .form-input {
+        margin-bottom: 28px;
+    }
+
+    .choices:last-child {
+        margin-bottom: 27px;
+    }
+  
+
+    .logo {
+        display: none;
+    }
+    
+}
+
